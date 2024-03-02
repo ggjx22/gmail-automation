@@ -20,7 +20,10 @@ def create_service(client_secret_file, api_name, api_version, *scopes):
 
     pickle_file = os.path.abspath(f'credentials/token_{API_SERVICE_NAME}_{API_VERSION}.pickle')
     
-    # print(pickle_file)
+    credentials_folder = os.path.dirname(pickle_file)
+    if not os.path.exists(credentials_folder):
+        print('INFO: Creating new credentials folder.')
+        os.makedirs(credentials_folder)
 
     print('INFO: Searching for any existing token file.')
     if os.path.exists(pickle_file):
