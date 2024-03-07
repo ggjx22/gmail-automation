@@ -3,7 +3,8 @@ from google_api.google_api_utils import create_service
 import os
 
 
-CLIENT_SERVICE_FILE = os.path.abspath('credentials/gg-gmail-automation.json')
+# CLIENT_SERVICE_FILE = os.path.abspath('credentials/gg-gmail-automation.json')
+CLIENT_SERVICE_FILE = os.path.abspath('gmail-automation/credentials/gg-gmail-automation.json')
 API_NAME = 'gmail'
 API_VERSION = 'v1'
 SCOPES = ['https://mail.google.com/']
